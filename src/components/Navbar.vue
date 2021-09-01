@@ -1,5 +1,16 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-black p-6">
+  <nav
+    class="
+      flex
+      items-center
+      justify-between
+      flex-wrap
+      bg-gradient-to-b
+      from-carbon
+      to-black
+      p-6
+    "
+  >
     <div class="flex items-center flex-shrink-0 text-white mr-6">
       <span class="font-semibold text-xl tracking-tight">Portfolio</span>
     </div>
@@ -63,15 +74,4 @@
 export default {};
 </script>
 
-<style>
-.bg-gradient-to-b {
-  background-image: -o-linear-gradient(top, var(--tw-gradient-stops));
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(var(--tw-gradient-stops))
-  );
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-</style>
+<style></style>

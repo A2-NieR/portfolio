@@ -20,10 +20,10 @@
         class="
           text-transparent
           bg-clip-text bg-gradient-to-b
-          from-red-600
-          to-yellow-300
+          from-phoenixRed
+          to-phoenixYellow
         "
-        style="animation: highlightFirst 6s infinite"
+        style="animation: highlightFirst 5s infinite"
       >
         Fullstack
       </h1>
@@ -31,10 +31,10 @@
         class="
           text-transparent
           bg-clip-text bg-gradient-to-b
-          from-yellow-300
-          to-green-500
+          from-jaguarYellow
+          to-jaguarGreen
         "
-        style="animation: highlightSecond 6s infinite"
+        style="animation: highlightSecond 5s infinite"
       >
         Web
       </h1>
@@ -42,10 +42,10 @@
         class="
           text-transparent
           bg-clip-text bg-gradient-to-b
-          from-green-500
-          to-blue-400
+          from-seaGreen
+          to-seaBlue
         "
-        style="animation: highlightThird 6s infinite"
+        style="animation: highlightThird 5s infinite"
       >
         Development
       </h1>
