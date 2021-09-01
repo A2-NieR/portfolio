@@ -7,7 +7,7 @@
   <div class="container max-w-none">
     <Navbar />
     <Title />
-    <!-- <Skills /> -->
+    <Skills />
     <!-- <Portfolio /> -->
   </div>
 </template>
