@@ -123,7 +123,11 @@
             width="12vh"
             class="fill-current text-white m-2 p-0"
           >
-            <path :d="skill.logo"></path>
+            <path :d="skill.logo" fill="url(#svg-gradient)"></path>
+            <linearGradient id="svg-gradient" x2="1" y2="1">
+              <stop offset="0%" :stop-color="gradStart" />
+              <stop offset="100%" :stop-color="gradStop" />
+            </linearGradient>
           </svg>
         </div>
 
@@ -142,10 +146,22 @@ import data from '../assets/data.json';
 export default {
   data() {
     const level = 0;
-    const allSelected = 'background-color: white; mix-blend-mode: screen';
-    const goodSelected = 'color: white';
-    const basicSelected = 'color: white';
-    const learningSelected = 'color: white';
+    const allSelected = null;
+    const goodSelected = null;
+    const basicSelected = null;
+    const learningSelected = null;
+    const gradStart = null;
+    const gradStop = null;
+
+    // gradient colors
+    const allStart = '#fddb92';
+    const allStop = '#d1fdff';
+    const goodStart = '#f9f047';
+    const goodStop = '#0fd850';
+    const basicStart = '#f9d423';
+    const basicStop = '#f83600';
+    const learningStart = '#2af598';
+    const learningStop = '#009efd';
 
     return {
       skills: data.skills,
@@ -153,7 +169,17 @@ export default {
       allSelected,
       goodSelected,
       basicSelected,
-      learningSelected
+      learningSelected,
+      gradStart,
+      gradStop,
+      allStart,
+      allStop,
+      goodStart,
+      goodStop,
+      basicStart,
+      basicStop,
+      learningStart,
+      learningStop
     };
   },
   methods: {
@@ -162,29 +188,64 @@ export default {
     },
     filterSkills(level) {
       if (level === 0) {
-        this.allSelected = 'background-color: white; mix-blend-mode: screen';
+        this.allSelected =
+          'background-image: linear-gradient(to bottom right, ' +
+          this.allStart +
+          ', ' +
+          this.allStop +
+          '); mix-blend-mode: screen';
         this.goodSelected = 'color: white';
         this.basicSelected = 'color: white';
         this.learningSelected = 'color: white';
+
+        this.gradStart = this.allStart;
+        this.gradStop = this.allStop;
+
         return this.skills;
       } else if (level === 1) {
         this.allSelected = 'color: white';
-        this.goodSelected = 'background-color: white; mix-blend-mode: screen';
+        this.goodSelected =
+          'background-image: linear-gradient(to bottom right, ' +
+          this.goodStart +
+          ', ' +
+          this.goodStop +
+          '); mix-blend-mode: screen';
         this.basicSelected = 'color: white';
         this.learningSelected = 'color: white';
+
+        this.gradStart = this.goodStart;
+        this.gradStop = this.goodStop;
+
         return this.skills.filter((skill) => skill.level === 1);
       } else if (level === 2) {
         this.allSelected = 'color: white';
         this.goodSelected = 'color: white';
-        this.basicSelected = 'background-color: white; mix-blend-mode: screen';
+        this.basicSelected =
+          'background-image: linear-gradient(to bottom right, ' +
+          this.basicStart +
+          ', ' +
+          this.basicStop +
+          '); mix-blend-mode: screen';
         this.learningSelected = 'color: white';
+
+        this.gradStart = this.basicStart;
+        this.gradStop = this.basicStop;
+
         return this.skills.filter((skill) => skill.level === 2);
       } else {
         this.allSelected = 'color: white';
         this.goodSelected = 'color: white';
         this.basicSelected = 'color: white';
         this.learningSelected =
-          'background-color: white; mix-blend-mode: screen';
+          'background-image: linear-gradient(to bottom right, ' +
+          this.learningStart +
+          ', ' +
+          this.learningStop +
+          '); mix-blend-mode: screen';
+
+        this.gradStart = this.learningStart;
+        this.gradStop = this.learningStop;
+
         return this.skills.filter((skill) => skill.level === 3);
       }
     }

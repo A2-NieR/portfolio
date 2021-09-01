@@ -15,7 +15,8 @@ module.exports = {
         seaBlue: '#009efd',
         metalBrown: '#d7d2cc',
         metalGray: '#304352',
-        carbon: '#434343'
+        carbon: '#434343',
+        glass: '#dfe9f3'
       }
     }
   },

@@ -8,7 +8,7 @@
     <Navbar />
     <Title />
     <Skills />
-    <!-- <Portfolio /> -->
+    <Portfolio />
   </div>
 </template>
 
