@@ -195,18 +195,14 @@
       "description": "A frontend written in Vue using the public SpaceX GraphQL API to display past missions and various details.",
       "url": "https://space-x-missions.netlify.app/",
       "git": "https://github.com/BunnyTheLifeguard/spacex-launches",
-      "img": [
-        "./src/assets/images/spacex3.png",
-        "./src/assets/images/spacex2.png",
-        "./src/assets/images/spacex1.png"
-      ]
+      "img": ["images/spacex3.png", "images/spacex2.png", "images/spacex1.png"]
     },
     {
       "name": "C19 Vaccine Trial Tracker",
       "description": "A SPA written in React using the API of clinivaltrials.gov to display the current status of clinical trials for different Covid-19 vaccines.",
       "url": "https://c19-vaccine-trials.herokuapp.com/",
       "git": "https://github.com/BunnyTheLifeguard/c19_vaccine_trial_tracker",
-      "img": ["./src/assets/images/c19.png", "./src/assets/images/c19t.png"]
+      "img": ["images/c19.png", "images/c19t.png"]
     },
     {
       "name": "Fullstack Open - Vue Edition",
@@ -214,9 +210,9 @@
       "url": "https://fullstackopen-vue.netlify.app/",
       "git": "https://github.com/BunnyTheLifeguard/fullstack-open-vue",
       "img": [
-        "./src/assets/images/fullstack1.png",
-        "./src/assets/images/fullstack2.png",
-        "./src/assets/images/fullstack3.png"
+        "images/fullstack1.png",
+        "images/fullstack2.png",
+        "images/fullstack3.png"
       ]
     },
     {
@@ -224,7 +220,7 @@
       "description": "A simple password generator written in Vue with vanilla CSS Styling.",
       "url": "https://bunnythelifeguard.github.io/password-generator/",
       "git": "https://github.com/BunnyTheLifeguard/password-generator",
-      "img": ["./src/assets/images/passgen.png"]
+      "img": ["images/passgen.png"]
     }
   ]
 }
