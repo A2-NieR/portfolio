@@ -13,11 +13,21 @@
     "
     id="project-container"
   >
-    <div class="flex-col w-full">
+    <div class="flex-col w-full section fadeup">
       <h1 class="text-5xl font-extralight text-offwhite pb-10" id="projects">
         Projects
       </h1>
-      <h4 class="text-lg font-light text-offwhite tracking-wide pb-32">
+      <h4
+        class="
+          text-lg
+          font-light
+          text-offwhite
+          tracking-wide
+          pb-32
+          fadeup
+          fade-delay
+        "
+      >
         An excerpt of my last and current projects, clicking a tile opens the
         project's website in a new browser tab. <br />
         For the source code feel free to visit my
@@ -27,6 +37,20 @@
           class="text-phoenixYellow no-underline hover:underline"
           >GitHub Page</a
         >.
+        <br />
+        <br />
+        <i
+          class="
+            text-md
+            font-light
+            text-offwhite
+            tracking-wide
+            fadeup
+            fade-delay
+          "
+          >This site is optimized for desktop PCs. If you are watching it on a
+          device with a touchscreen you will miss out on some animations.</i
+        >
       </h4>
     </div>
 
@@ -135,15 +159,47 @@
 </template>
 
 <script>
-import data from '../assets/data.json';
+import data from '../assets/data.json'
 
 export default {
-  data() {
-    return {
-      projects: data.projects
-    };
+  setup() {
+    const projects = data.projects
+
+    const observerOptions = {
+      root: null,
+      threshold: 0,
+      rootMargin: '0px 0px -50px 0px'
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view')
+          observer.unobserve(entry.target)
+        }
+      })
+    }, observerOptions)
+
+    onMounted(() => {
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const sections = Array.from(document.getElementsByClassName('section'))
+
+        for (let section of sections) {
+          const fadeups = section.getElementsByClassName('fade-delay')
+          for (let count = 0; count < fadeups.length; count++) {
+            fadeups[count].setAttribute(
+              'style',
+              'transition-delay: ' + count * 0.5 + 's'
+            )
+          }
+          observer.observe(section)
+        }
+      })
+    })
+
+    return { projects }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -156,5 +212,19 @@ export default {
 }
 section {
   padding: 20px 32px;
+}
+
+.fadeup {
+  transform: translateY(50px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.in-view.fadeup,
+.in-view .fadeup {
+  transform: none;
+  opacity: 1;
 }
 </style>
