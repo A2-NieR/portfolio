@@ -1,58 +1,45 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-black p-6">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <span class="font-semibold text-xl tracking-tight">Portfolio</span>
-    </div>
-    <div class="block lg:hidden">
-      <button
+  <nav class="flex flex-wrap absolute w-full h-auto justify-between">
+    <div
+      class="
+        block
+        flex-grow-0 flex-shrink-0
+        m-0
+        p-0
+        text-offwhite
+        px-16
+        md:px-24
+      "
+      id="nav-content"
+    >
+      <div
+        class="relative block overflow-hidden float-left font-light text-2xl"
+      >
+        SR Portfolio
+      </div>
+      <div
         class="
-          flex
-          items-center
-          px-3
-          py-2
-          border
-          rounded
-          text-teal-200
-          border-teal-400
-          hover:text-white hover:border-yellow-500
+          inline-block
+          relative
+          float-right
+          m-0
+          p-0
+          text-xl
+          font-extralight
         "
       >
-        <svg
-          class="fill-current h-3 w-3"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </button>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div class="text-sm lg:flex-grow">
-        <a
-          href="#skills"
-          class="
-            block
-            mt-4
-            lg:inline-block lg:mt-0
-            text-yellow-200
-            hover:text-white
-            mr-4
-          "
-        >
+        <a href="#projects" class="text-phoenixYellow hover:text-offwhite">
+          Projects
+        </a>
+        <a href="#skills" class="text-phoenixYellow hover:text-offwhite ml-3">
           Skills
         </a>
         <a
-          href="#projects"
-          class="
-            block
-            mt-4
-            lg:inline-block lg:mt-0
-            text-yellow-200
-            hover:text-white
-          "
+          href="https://github.com/BunnyTheLifeguard"
+          target="_blank"
+          class="text-phoenixYellow hover:text-offwhite ml-3"
         >
-          Projects
+          GitHub
         </a>
       </div>
     </div>
@@ -63,15 +50,14 @@
 export default {};
 </script>
 
-<style>
-.bg-gradient-to-b {
-  background-image: -o-linear-gradient(top, var(--tw-gradient-stops));
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(var(--tw-gradient-stops))
-  );
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+<style scoped>
+nav {
+  padding-top: 100px;
+  /* padding-right: 50px;
+  padding-left: 50px; */
+}
+
+#nav-content {
+  flex-basis: 100%;
 }
 </style>
