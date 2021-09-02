@@ -21,13 +21,19 @@
           id="hero-content"
         >
           <h1
-            class="font-prata font-medium text-offwhite tracking-normal"
+            class="
+              font-prata font-medium
+              text-offwhite
+              tracking-normal
+              section
+              fadeup
+            "
             id="headline"
           >
-            <span>Fullstack </span>
-            <span>Web</span>
+            <span class="fadeup fadeup-delay">Fullstack </span>
+            <span class="fadeup fadeup-delay">Web</span>
             <br />
-            <span>Development</span>
+            <span class="fadeup fadeup-delay">Development</span>
           </h1>
         </div>
       </div>
@@ -36,7 +42,42 @@
 </template>
 
 <script>
-export default {};
+import { onMounted } from 'vue'
+export default {
+  setup() {
+    const observerOptions = {
+      root: null,
+      threshold: 0,
+      rootMargin: '0px 0px -50px 0px'
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view')
+          observer.unobserve(entry.target)
+        }
+      })
+    }, observerOptions)
+
+    onMounted(() => {
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const sections = Array.from(document.getElementsByClassName('section'))
+
+        for (let section of sections) {
+          const fadeups = section.getElementsByClassName('fade-delay')
+          for (let count = 0; count < fadeups.length; count++) {
+            fadeups[count].setAttribute(
+              'style',
+              'transition-delay: ' + count * 0.5 + 's'
+            )
+          }
+          observer.observe(section)
+        }
+      })
+    })
+  }
+}
 </script>
 
 <style scoped>
@@ -53,5 +94,19 @@ header {
 }
 #hero-content {
   flex-basis: 100%;
+}
+
+.fadeup {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.in-view.fadeup,
+.in-view .fadeup {
+  transform: none;
+  opacity: 1;
 }
 </style>

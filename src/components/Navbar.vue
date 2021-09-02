@@ -28,10 +28,16 @@
           font-extralight
         "
       >
-        <a href="#projects" class="text-phoenixYellow hover:text-offwhite">
+        <a
+          href="#project-container"
+          class="text-phoenixYellow hover:text-offwhite"
+        >
           Projects
         </a>
-        <a href="#skills" class="text-phoenixYellow hover:text-offwhite ml-3">
+        <a
+          href="#skill-container"
+          class="text-phoenixYellow hover:text-offwhite ml-3"
+        >
           Skills
         </a>
         <a
@@ -47,7 +53,7 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style scoped>

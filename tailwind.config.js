@@ -14,8 +14,6 @@ module.exports = {
         jaguarGreen: '#0fd850',
         seaGreen: '#2af598',
         seaBlue: '#009efd',
-        metalBrown: '#d7d2cc',
-        metalGray: '#304352',
         carbon: '#111111',
         offwhite: '#fefefe'
       },
