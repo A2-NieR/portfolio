@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        exo2: ['Exo\\ 2', 'sans-serif']
+        prata: ['Prata', 'serif'],
+        titillium: ['Titillium Web', 'sans-serif']
       },
       colors: {
         phoenixRed: '#f83600',
@@ -15,8 +16,14 @@ module.exports = {
         seaBlue: '#009efd',
         metalBrown: '#d7d2cc',
         metalGray: '#304352',
-        carbon: '#434343',
-        glass: '#dfe9f3'
+        carbon: '#111111',
+        offwhite: '#fefefe'
+      },
+      opacity: {
+        80: '0.8',
+        85: '0.85',
+        90: '0.9',
+        95: '0.95'
       }
     }
   },

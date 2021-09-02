@@ -4,12 +4,21 @@
 </script>
 
 <template>
-  <div class="container max-w-none">
+  <div class="bg-carbon font-titillium">
     <Navbar />
-    <Title />
-    <Skills />
-    <Portfolio />
+    <section class="block">
+      <Title />
+      <Projects />
+      <!-- <Skills /> -->
+    </section>
   </div>
 </template>
 
-<style></style>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+section {
+  padding-top: 193px;
+}
+</style>

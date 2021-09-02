@@ -1,64 +1,57 @@
 <template>
-  <div class="container max-w-none flex items-center justify-center">
-    <video autoplay muted loop id="myVideo" class="static min-w-full z-0">
-      <source src="../assets/night.mp4" type="video/mp4" />
-    </video>
-    <div
-      class="
-        absolute
-        text-5xl
-        sm:text-6xl
-        md:text-7xl
-        lg:text-8xl
-        xl:text-9xl
-        font-exo2
-        uppercase
-        z-10
-      "
-    >
-      <h1
+  <header class="block">
+    <div class="block h-full m-0 p-0" id="hero">
+      <div
         class="
-          text-transparent
-          bg-clip-text bg-gradient-to-b
-          from-phoenixRed
-          to-phoenixYellow
+          flex flex-wrap
+          relative
+          h-full
+          w-full
+          items-end
+          justify-center
+          m-0
+          p-0
         "
-        style="animation: highlightFirst 5s infinite"
+        id="hero-canvas"
       >
-        Fullstack
-      </h1>
-      <h1
-        class="
-          text-transparent
-          bg-clip-text bg-gradient-to-b
-          from-jaguarYellow
-          to-jaguarGreen
-        "
-        style="animation: highlightSecond 5s infinite"
-      >
-        Web
-      </h1>
-      <h1
-        class="
-          text-transparent
-          bg-clip-text bg-gradient-to-b
-          from-seaGreen
-          to-seaBlue
-        "
-        style="animation: highlightThird 5s infinite"
-      >
-        Development
-      </h1>
+        <div class="block flex-grow-0 flex-shrink-0 m-0 p-0" id="hero-content">
+          <h1
+            class="font-prata font-medium text-offwhite tracking-normal"
+            id="headline"
+          >
+            <span>Fullstack </span>
+            <span>Web</span>
+            <br />
+            <span>Development</span>
+          </h1>
+        </div>
+      </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style>
-@keyframes highlightFirst {
+<style scoped>
+header {
+  height: calc(83vh - 193px);
+  min-height: 215px;
+}
+#headline {
+  font-size: 6.94444vw;
+  line-height: 6.8vw;
+}
+#hero-canvas {
+  padding-bottom: 9%;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+#hero-content {
+  flex-basis: 83.33333%;
+}
+/* @keyframes highlightFirst {
   0% {
     color: transparent;
   }
@@ -117,5 +110,5 @@ export default {};
   100% {
     color: transparent;
   }
-}
+} */
 </style>
