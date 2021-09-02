@@ -9,7 +9,7 @@
     <section class="block">
       <Title />
       <Projects />
-      <!-- <Skills /> -->
+      <Skills />
     </section>
   </div>
 </template>

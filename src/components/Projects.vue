@@ -14,16 +14,18 @@
     id="project-container"
   >
     <div class="flex-col w-full">
-      <h1 class="text-5xl font-semibold text-offwhite pb-10" id="projects">
+      <h1 class="text-5xl font-extralight text-offwhite pb-10" id="projects">
         Projects
       </h1>
       <h4 class="text-lg font-light text-offwhite pb-32">
-        An excerpt of my last and current projects, for details visit my<a
+        An excerpt of my last and current projects, clicking opens them in a new
+        browser tab. <br />
+        For the source code feel free to visit my<a
           href="https://github.com/BunnyTheLifeguard"
           target="_blank"
           class="text-phoenixYellow hover:text-offwhite ml-2"
-          >GitHub</a
-        >
+          >GitHub Page</a
+        >.
       </h4>
     </div>
 

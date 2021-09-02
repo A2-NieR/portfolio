@@ -196,9 +196,9 @@
       "url": "https://space-x-missions.netlify.app/",
       "git": "https://github.com/BunnyTheLifeguard/spacex-launches",
       "img": [
-        "./src/assets/images/spacex1.png",
+        "./src/assets/images/spacex3.png",
         "./src/assets/images/spacex2.png",
-        "./src/assets/images/spacex3.png"
+        "./src/assets/images/spacex1.png"
       ]
     },
     {
