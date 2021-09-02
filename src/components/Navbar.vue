@@ -1,7 +1,15 @@
 <template>
-  <nav class="flex flex-wrap absolute w-full h-auto justify-center z-10">
+  <nav class="flex flex-wrap absolute w-full h-auto justify-between">
     <div
-      class="block flex-grow-0 flex-shrink-0 m-0 p-0 text-offwhite"
+      class="
+        block
+        flex-grow-0 flex-shrink-0
+        m-0
+        p-0
+        text-offwhite
+        px-16
+        md:px-24
+      "
       id="nav-content"
     >
       <div
@@ -45,11 +53,11 @@ export default {};
 <style scoped>
 nav {
   padding-top: 100px;
-  padding-right: 50px;
-  padding-left: 50px;
+  /* padding-right: 50px;
+  padding-left: 50px; */
 }
 
 #nav-content {
-  flex-basis: 83.33333%;
+  flex-basis: 100%;
 }
 </style>

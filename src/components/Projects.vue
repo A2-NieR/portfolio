@@ -17,28 +17,21 @@
       <h1 class="text-5xl font-extralight text-offwhite pb-10" id="projects">
         Projects
       </h1>
-      <h4 class="text-lg font-light text-offwhite pb-32">
-        An excerpt of my last and current projects, clicking opens them in a new
-        browser tab. <br />
-        For the source code feel free to visit my<a
+      <h4 class="text-lg font-light text-offwhite tracking-wide pb-32">
+        An excerpt of my last and current projects, clicking a tile opens the
+        project's website in a new browser tab. <br />
+        For the source code feel free to visit my
+        <a
           href="https://github.com/BunnyTheLifeguard"
           target="_blank"
-          class="text-phoenixYellow hover:text-offwhite ml-2"
+          class="text-phoenixYellow no-underline hover:underline"
           >GitHub Page</a
         >.
       </h4>
     </div>
 
     <div
-      class="
-        flex flex-grow-0 flex-shrink-0
-        items-center
-        justify-center
-        m-0
-        p-0
-        text-offwhite
-        hover:text-transparent
-      "
+      class="flex flex-grow-0 flex-shrink-0 items-center justify-center m-0 p-0"
       v-for="project in projects"
       :key="project.name"
       id="project-canvas"
@@ -54,6 +47,11 @@
           w-full
           h-full
           cursor-pointer
+          scale-95
+          transform
+          transition
+          duration-500
+          hover:scale-100
         "
       >
         <img
@@ -73,8 +71,13 @@
             mr-0
             items-center
             justify-center
-            bg-black bg-opacity-80
+            bg-carbon
+            opacity-85
+            transition
+            duration-250
             hover:bg-opacity-0
+            text-offwhite
+            hover:text-transparent
           "
         >
           <div
@@ -111,7 +114,16 @@
               >
                 {{ project.name }}
               </h2>
-              <h4 class="hidden md:inline-block h-auto text-center md:text-lg">
+              <h4
+                class="
+                  hidden
+                  md:inline-block
+                  h-auto
+                  text-center
+                  md:text-xl
+                  tracking-wide
+                "
+              >
                 {{ project.description }}
               </h4>
             </div>
@@ -135,10 +147,6 @@ export default {
 </script>
 
 <style scoped>
-/* #project-container {
-  padding-right: 150px;
-  padding-left: 150px;
-} */
 #project-canvas {
   flex-basis: 100%;
   margin-bottom: 50px;
@@ -149,7 +157,4 @@ export default {
 section {
   padding: 20px 32px;
 }
-/* #project-description {
-  max-width: 300px;
-} */
 </style>

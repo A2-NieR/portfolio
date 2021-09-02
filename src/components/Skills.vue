@@ -20,7 +20,15 @@
     <h1 class="text-5xl font-extralight text-offwhite" id="skills">Skills:</h1>
     <div class="flex font-medium sm:font-semibold text-xl mt-10 sm:mt-0">
       <h3
-        class="cursor-pointer py-1 px-5"
+        class="
+          cursor-pointer
+          py-1
+          px-5
+          transition
+          duration-250
+          no-underline
+          hover:underline
+        "
         @click="setLevel(0)"
         :style="allSelected"
       >
@@ -28,7 +36,15 @@
       </h3>
 
       <h3
-        class="cursor-pointer py-1 px-5"
+        class="
+          cursor-pointer
+          py-1
+          px-5
+          transition
+          duration-250
+          no-underline
+          hover:underline
+        "
         @click="setLevel(1)"
         :style="goodSelected"
       >
@@ -36,7 +52,15 @@
       </h3>
 
       <h3
-        class="cursor-pointer py-1 px-5"
+        class="
+          cursor-pointer
+          py-1
+          px-5
+          transition
+          duration-250
+          no-underline
+          hover:underline
+        "
         @click="setLevel(2)"
         :style="basicSelected"
       >
@@ -44,7 +68,15 @@
       </h3>
 
       <h3
-        class="cursor-pointer py-1 px-5"
+        class="
+          cursor-pointer
+          py-1
+          px-5
+          transition
+          duration-250
+          no-underline
+          hover:underline
+        "
         @click="setLevel(3)"
         :style="learningSelected"
       >

@@ -210,7 +210,7 @@
     },
     {
       "name": "Fullstack Open - Vue Edition",
-      "description": "A Vue version based on University of Helsinki's Fullstack Open course teaching Vue, Node.JS, MongoDB, GraphQL, among others. ",
+      "description": "University of Helsinki's Fullstack Open course rewritten for the Vue ecosystem, teaching Vue, Node.JS, MongoDB, GraphQL, among others. ",
       "url": "https://fullstackopen-vue.netlify.app/",
       "git": "https://github.com/BunnyTheLifeguard/fullstack-open-vue",
       "img": [
@@ -221,7 +221,7 @@
     },
     {
       "name": "Password Generator",
-      "description": "A simple password generator written in Vue.",
+      "description": "A simple password generator written in Vue with vanilla CSS Styling.",
       "url": "https://bunnythelifeguard.github.io/password-generator/",
       "git": "https://github.com/BunnyTheLifeguard/password-generator",
       "img": ["./src/assets/images/passgen.png"]

@@ -11,10 +11,15 @@
           justify-center
           m-0
           p-0
+          px-16
+          md:px-24
         "
         id="hero-canvas"
       >
-        <div class="block flex-grow-0 flex-shrink-0 m-0 p-0" id="hero-content">
+        <div
+          class="block flex-grow-0 flex-shrink-0 m-0 p-0 pt-0 lg:pt-64"
+          id="hero-content"
+        >
           <h1
             class="font-prata font-medium text-offwhite tracking-normal"
             id="headline"
@@ -45,70 +50,8 @@ header {
 }
 #hero-canvas {
   padding-bottom: 9%;
-  padding-right: 50px;
-  padding-left: 50px;
 }
 #hero-content {
-  flex-basis: 83.33333%;
+  flex-basis: 100%;
 }
-/* @keyframes highlightFirst {
-  0% {
-    color: transparent;
-  }
-  20% {
-    color: transparent;
-  }
-  40% {
-    color: white;
-  }
-  60% {
-    color: white;
-  }
-  80% {
-    color: white;
-  }
-  100% {
-    color: white;
-  }
-}
-@keyframes highlightSecond {
-  0% {
-    color: white;
-  }
-  20% {
-    color: white;
-  }
-  40% {
-    color: transparent;
-  }
-  60% {
-    color: transparent;
-  }
-  80% {
-    color: white;
-  }
-  100% {
-    color: white;
-  }
-}
-@keyframes highlightThird {
-  0% {
-    color: white;
-  }
-  20% {
-    color: white;
-  }
-  40% {
-    color: white;
-  }
-  60% {
-    color: white;
-  }
-  80% {
-    color: transparent;
-  }
-  100% {
-    color: transparent;
-  }
-} */
 </style>
