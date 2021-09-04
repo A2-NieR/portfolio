@@ -6,6 +6,6 @@ import 'aos/dist/aos.css'
 
 const app = createApp(App)
 
-app.AOS = new AOS.init()
+app.AOS = new AOS.init() // eslint-disable-line
 
 app.mount('#app')
