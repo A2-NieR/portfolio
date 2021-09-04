@@ -13,48 +13,41 @@
     "
     id="project-container"
   >
-    <div class="flex-col w-full section fadeup">
-      <h1 class="text-5xl font-extralight text-offwhite pb-10" id="projects">
+    <div class="flex-col w-full section">
+      <h1 class="text-5xl font-extralight text-offwhite pb-20" id="projects">
         Projects
       </h1>
-      <h4
-        class="
-          text-lg
-          font-light
-          text-offwhite
-          tracking-wide
-          pb-32
-          fadeup
-          fade-delay
-        "
-      >
-        An excerpt of my most recent projects, clicking a tile opens the
-        project's website in a new browser tab. <br />
-        For more details and source code feel free to visit my
-        <a
-          href="https://github.com/BunnyTheLifeguard"
-          target="_blank"
-          class="text-phoenixYellow no-underline hover:underline"
-          >GitHub Page</a
-        >.
-        <br />
-        <br />
-        <i
-          class="
-            text-md
-            font-light
-            text-offwhite
-            tracking-wide
-            fadeup
-            fade-delay
-          "
-          >This site is optimized for desktop PCs. If you are using it on a
-          device with a touchscreen you will miss out on some animations.</i
+      <div class="flex-col">
+        <h4
+          data-aos="fade-right"
+          data-aos-easing="ease"
+          data-aos-duration="500"
+          class="text-lg font-light text-offwhite tracking-wide pb-10"
         >
-      </h4>
+          An excerpt of my most recent projects, clicking a tile opens the
+          project's website in a new browser tab. <br />
+          For more details and source code feel free to visit my
+          <a
+            href="https://github.com/BunnyTheLifeguard"
+            target="_blank"
+            class="text-phoenixYellow no-underline hover:underline"
+            >GitHub Page</a
+          >.
+        </h4>
+        <h4
+          data-aos="fade-left"
+          data-aos-easing="ease"
+          data-aos-duration="500"
+          class="text-md font-light italic text-offwhite tracking-wide pb-10"
+        >
+          This site is optimized for desktop PCs. If you are using it on a
+          device with a touchscreen you will miss out on some animations.
+        </h4>
+      </div>
     </div>
 
     <div
+      data-aos="zoom-in"
       class="
         flex-col flex-grow-0 flex-shrink-0
         items-center
@@ -78,10 +71,6 @@
           h-full
           cursor-pointer
           scale-95
-          transform
-          transition
-          duration-500
-          hover:scale-100
         "
       >
         <img
@@ -201,38 +190,6 @@ export default {
   setup() {
     const projects = data.projects
 
-    const observerOptions = {
-      root: null,
-      threshold: 0,
-      rootMargin: '0px 0px -50px 0px'
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view')
-          observer.unobserve(entry.target)
-        }
-      })
-    }, observerOptions)
-
-    onMounted(() => {
-      window.addEventListener('DOMContentLoaded', (event) => {
-        const sections = Array.from(document.getElementsByClassName('section'))
-
-        for (let section of sections) {
-          const fadeups = section.getElementsByClassName('fade-delay')
-          for (let count = 0; count < fadeups.length; count++) {
-            fadeups[count].setAttribute(
-              'style',
-              'transition-delay: ' + count * 0.5 + 's'
-            )
-          }
-          observer.observe(section)
-        }
-      })
-    })
-
     return { projects }
   }
 }
@@ -248,19 +205,5 @@ export default {
 }
 section {
   padding: 20px 32px;
-}
-
-.fadeup {
-  transform: translateY(50px);
-  opacity: 0;
-  transition-property: transform, opacity;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-}
-
-.in-view.fadeup,
-.in-view .fadeup {
-  transform: none;
-  opacity: 1;
 }
 </style>

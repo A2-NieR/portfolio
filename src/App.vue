@@ -46,28 +46,28 @@ export default {
     return {
       scTimer: 0,
       scY: 0
-    };
+    }
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll() {
-      if (this.scTimer) return;
+      if (this.scTimer) return
       this.scTimer = setTimeout(() => {
-        this.scY = window.scrollY;
-        clearTimeout(this.scTimer);
-        this.scTimer = 0;
-      }, 100);
+        this.scY = window.scrollY
+        clearTimeout(this.scTimer)
+        this.scTimer = 0
+      }, 100)
     },
     toTop() {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
-      });
+      })
     }
   }
-};
+}
 </script>
 
 <style>

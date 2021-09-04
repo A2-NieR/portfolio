@@ -15,7 +15,6 @@
       justify-between
       items-center
       section
-      fadeup
     "
     id="skill-container"
   >
@@ -85,10 +84,13 @@
         Learning
       </h3>
     </div>
-    <div class="flex flex-wrap justify-evenly mt-8 w-full fadeup fade-delay">
+    <div class="flex flex-wrap justify-evenly mt-8 w-full">
       <div
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="750"
         v-for="skill in filterSkills(level)"
-        :key="skill.name"
+        :key="skill.name + level"
         class="flex flex-row m-5"
       >
         <div class="flex">
@@ -121,6 +123,7 @@
 
 <script>
 import { ref } from 'vue'
+import AOS from 'aos'
 import data from '../assets/data.json'
 
 export default {
@@ -147,6 +150,7 @@ export default {
     // Filter & colorize skills
     const setLevel = (filterLevel) => {
       level.value = filterLevel
+      AOS.refresh()
     }
 
     const filterSkills = (level) => {
@@ -213,39 +217,6 @@ export default {
       }
     }
 
-    // Fancy animation methods
-    const observerOptions = {
-      root: null,
-      threshold: 0,
-      rootMargin: '0px 0px -75px 0px'
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view')
-          observer.unobserve(entry.target)
-        }
-      })
-    }, observerOptions)
-
-    onMounted(() => {
-      window.addEventListener('DOMContentLoaded', (event) => {
-        const sections = Array.from(document.getElementsByClassName('section'))
-
-        for (let section of sections) {
-          const fadeups = section.getElementsByClassName('fade-delay')
-          for (let count = 0; count < fadeups.length; count++) {
-            fadeups[count].setAttribute(
-              'style',
-              'transition-delay: ' + count * 0.5 + 's'
-            )
-          }
-          observer.observe(section)
-        }
-      })
-    })
-
     return {
       skills,
       level,
@@ -273,19 +244,5 @@ export default {
 <style>
 #skill-container {
   padding-bottom: 750px;
-}
-
-.fadeup {
-  transform: translateY(75px);
-  opacity: 0;
-  transition-property: transform, opacity;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-}
-
-.in-view.fadeup,
-.in-view .fadeup {
-  transform: none;
-  opacity: 1;
 }
 </style>
