@@ -1,45 +1,3 @@
-<template>
-  <div class="bg-carbon font-titillium">
-    <Navbar />
-    <section class="block">
-      <Title />
-      <Projects />
-      <Skills />
-    </section>
-    <transition name="fade">
-      <div
-        id="pagetop"
-        class="
-          fixed
-          right-7
-          bottom-7
-          cursor-pointer
-          transform
-          transition
-          duration-250
-          hover:scale-125
-        "
-        v-show="scY > 750"
-        @click="toTop"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="48"
-          height="48"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#f9d423"
-          stroke-width="1"
-          stroke-linecap="square"
-          stroke-linejoin="arcs"
-        >
-          <path d="M18 15l-6-6-6 6" />
-        </svg>
-      </div>
-    </transition>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -69,6 +27,43 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div bg="carbon" font="titillium">
+    <Navbar />
+
+    <section display="block">
+      <Title />
+      <Projects />
+      <Skills />
+    </section>
+
+    <transition name="fade">
+      <div
+        id="pagetop"
+        pos="fixed right-7 bottom-7"
+        cursor="pointer"
+        class="transform transition duration-250 hover:scale-125"
+        v-show="scY > 750"
+        @click="toTop"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#f9d423"
+          stroke-width="1"
+          stroke-linecap="square"
+          stroke-linejoin="arcs"
+        >
+          <path d="M18 15l-6-6-6 6" />
+        </svg>
+      </div>
+    </transition>
+  </div>
+</template>
 
 <style>
 html {

@@ -1,5 +1,5 @@
-module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+export default {
+  attributify: true,
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -24,9 +24,5 @@ module.exports = {
         95: '0.95'
       }
     }
-  },
-  variants: {
-    extend: {}
-  },
-  plugins: []
+  }
 }

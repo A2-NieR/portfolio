@@ -1,35 +1,24 @@
 <template>
   <div
-    class="
-      flex flex-wrap
-      relative
-      w-full
-      h-full
-      m-0
-      p-0
-      border-t border-phoenixYellow
-      pt-40
-      mt-20
-      px-16
-      md:px-24
-      justify-between
-      items-center
-      section
-    "
+    pos="relative"
+    h="full"
+    w="full"
+    m="0 t-20"
+    p="0 t-40 x-16 md:x-24"
+    display="flex"
+    flex="wrap"
+    justify="between"
+    align="items-center"
+    border="1 transparent t-phoenixYellow"
+    class="section"
     id="skill-container"
   >
-    <h1 class="text-5xl font-extralight text-offwhite" id="skills">Skills:</h1>
-    <div class="flex font-medium sm:font-semibold text-xl mt-10 sm:mt-0">
+    <h1 font="extralight" text="5xl offwhite" id="skills">Skills:</h1>
+    <div display="flex" m="t-10 sm:t-0" font="medium sm:semibold" text="xl">
       <h3
-        class="
-          cursor-pointer
-          py-1
-          px-5
-          transition
-          duration-250
-          no-underline
-          hover:underline
-        "
+        p="y-1 x-5"
+        cursor="pointer"
+        class="transition duration-250 no-underline hover:underline"
         @click="setLevel(0)"
         :style="allSelected"
       >
@@ -37,15 +26,9 @@
       </h3>
 
       <h3
-        class="
-          cursor-pointer
-          py-1
-          px-5
-          transition
-          duration-250
-          no-underline
-          hover:underline
-        "
+        p="y-1 x-5"
+        cursor="pointer"
+        class="transition duration-250 no-underline hover:underline"
         @click="setLevel(1)"
         :style="goodSelected"
       >
@@ -53,15 +36,9 @@
       </h3>
 
       <h3
-        class="
-          cursor-pointer
-          py-1
-          px-5
-          transition
-          duration-250
-          no-underline
-          hover:underline
-        "
+        p="y-1 x-5"
+        cursor="pointer"
+        class="transition duration-250 no-underline hover:underline"
         @click="setLevel(2)"
         :style="basicSelected"
       >
@@ -69,31 +46,27 @@
       </h3>
 
       <h3
-        class="
-          cursor-pointer
-          py-1
-          px-5
-          transition
-          duration-250
-          no-underline
-          hover:underline
-        "
+        p="y-1 x-5"
+        cursor="pointer"
+        class="transition duration-250 no-underline hover:underline"
         @click="setLevel(3)"
         :style="learningSelected"
       >
         Learning
       </h3>
     </div>
-    <div class="flex flex-wrap justify-evenly mt-8 w-full">
+    <div m="t-8" w="full" display="flex" flex="wrap" justify="evenly">
       <div
         data-aos="fade-up"
         data-aos-easing="ease"
         data-aos-duration="750"
         v-for="skill in filterSkills(level)"
         :key="skill.name + level"
-        class="flex flex-row m-5"
+        display="flex"
+        flex="row"
+        m="5"
       >
-        <div class="flex">
+        <div display="flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -113,9 +86,13 @@
           </svg>
         </div>
 
-        <span class="font-medium text-center text-offwhite flex self-center">{{
-          skill.name
-        }}</span>
+        <span
+          display="flex"
+          align="self-center"
+          font="medium"
+          text="center offwhite"
+          >{{ skill.name }}</span
+        >
       </div>
     </div>
   </div>

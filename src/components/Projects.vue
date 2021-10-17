@@ -1,28 +1,35 @@
+<script setup>
+import data from '../assets/data.json'
+
+import IconGithub from '~icons/mdi/github'
+
+const projects = data.projects
+</script>
+
 <template>
   <div
-    class="
-      flex flex-wrap
-      static
-      w-full
-      m-0
-      p-0
-      pt-40
-      border-t border-phoenixYellow
-      px-16
-      md:px-24
-    "
+    display="flex"
+    flex="wrap"
+    justify="items-center"
+    pos="static"
+    w="full"
+    m="0"
+    p="0 t-40 x-16 md:x-24"
+    border="1 transparent t-phoenixYellow"
     id="project-container"
   >
-    <div class="flex-col w-full section">
-      <h1 class="text-5xl font-extralight text-offwhite pb-20" id="projects">
+    <div flex="col" w="full" class="section">
+      <h1 p="b-20" text="5xl offwhite" font="extralight" id="projects">
         Projects
       </h1>
-      <div class="flex-col">
+      <div flex="col">
         <h4
           data-aos="fade-right"
           data-aos-easing="ease"
           data-aos-duration="500"
-          class="text-lg font-light text-offwhite tracking-wide pb-10"
+          p="b-10"
+          text="lg offwhite"
+          font="light tracking-wide"
         >
           An excerpt of my most recent projects, clicking a tile opens the
           project's website in a new browser tab. <br />
@@ -38,9 +45,11 @@
           data-aos="fade-left"
           data-aos-easing="ease"
           data-aos-duration="500"
-          class="text-md font-light italic text-offwhite tracking-wide pb-10"
+          p="b-10"
+          font="light tracking-wide"
+          class="text-md italic text-offwhite"
         >
-          This site is optimized for desktop PCs. If you are using it on a
+          This site is optimized for desktop PCs. If you are displaying it on a
           device with a touchscreen you will miss out on some animations.
         </h4>
       </div>
@@ -48,13 +57,11 @@
 
     <div
       data-aos="zoom-in"
-      class="
-        flex-col flex-grow-0 flex-shrink-0
-        items-center
-        justify-center justify-items-center
-        m-0
-        p-0
-      "
+      m="0"
+      p="0"
+      display="flex"
+      flex="col grow-0 shrink-0"
+      align="items-center"
       v-for="project in projects"
       :key="project.name"
       id="project-canvas"
@@ -62,86 +69,69 @@
       <a
         :href="project.url"
         target="_blank"
-        class="
-          relative
-          flex
-          items-center
-          justify-center
-          w-full
-          h-full
-          cursor-pointer
-          scale-95
-        "
+        pos="relative"
+        h="full"
+        w="full"
+        display="flex"
+        justify="items-center"
+        align="items-center"
+        cursor="pointer"
+        transform="scale-95"
       >
         <img
           :src="project.img[0]"
           :alt="project.name + '_screenshot'"
-          class="block w-full max-w-full rounded"
+          display="block"
+          w="full max-full"
+          border="rounded"
         />
         <section
-          class="
-            flex flex-wrap
-            absolute
-            top-0
-            left-0
-            w-full
-            h-full
-            ml-0
-            mr-0
-            items-center
-            justify-center
-            bg-carbon
-            opacity-85
-            transition
-            duration-250
-            hover:bg-opacity-0
-            text-offwhite
-            hover:text-transparent
-          "
+          pos="absolute top-0 left-0"
+          display="flex"
+          flex="wrap"
+          justify="center"
+          align="items-center"
+          h="full"
+          w="full"
+          m="x-0"
+          bg="carbon"
+          opacity="90 hover:0"
+          text="offwhite hover:transparent"
+          class="transition duration-250"
         >
           <div
-            class="
-              relative
-              top-0
-              left-0
-              w-full
-              h-full
-              flex
-              justify-center
-              items-center
-              flex-grow-0 flex-shrink-0
-              m-0
-              p-0
-              max-w-xs
-            "
+            pos="relative top-0 left-0"
+            h="full"
+            w="full max-xs"
+            m="0"
+            p="0"
+            display="flex"
+            flex="grow-0 shrink-0"
+            justify="items-center"
+            align="items-center"
             id="project-title"
           >
             <div
-              class="flex-col justify-items-center items-center"
+              display="flex"
+              flex="col"
+              justify="items-center"
+              align="items-center"
               id="project-description"
             >
               <h2
-                class="
-                  inline-block
-                  h-auto
-                  font-bold
-                  text-center text-xl
-                  md:text-4xl
-                  pb-2
-                  md:pb-10
-                "
+                display="inline-block"
+                h="auto"
+                p="b-2 md:b-10"
+                font="bold"
+                text="center xl md:4xl"
               >
                 {{ project.name }}
               </h2>
               <h4
-                class="
-                  hidden
-                  md:inline-block
-                  h-auto
-                  text-center
-                  md:text-xl
-                  tracking-wide
-                "
+                display="hidden md:inline-block"
+                h="auto"
+                text="center md:xl"
+                font="tracking-wide"
               >
                 {{ project.description }}
               </h4>
@@ -149,51 +139,20 @@
           </div>
         </section>
       </a>
-      <div class="flex justify-center items-center">
+      <div display="flex" justify="items-center" align="items-center">
         <a
           :href="project.git"
           target="_blank"
-          class="
-            text-center text-phoenixYellow
-            py-5
-            px-1
-            no-underline
-            hover:underline
-          "
+          p="x-1 y-5"
+          class="text-center text-phoenixYellow no-underline hover:underline"
         >
-          View Source Code </a
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          aria-hidden="true"
-          role="img"
-          class="iconify iconify--mdi p-1 ml-2"
-          width="32"
-          height="32"
-          preserveAspectRatio="xMidYMid meet"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"
-            fill="#fefefe"
-          ></path>
-        </svg>
+          View Source Code
+        </a>
+        <IconGithub text="offwhite" m="l-1" h="5" w="5" />
       </div>
     </div>
   </div>
 </template>
-
-<script>
-import data from '../assets/data.json'
-
-export default {
-  setup() {
-    const projects = data.projects
-
-    return { projects }
-  }
-}
-</script>
 
 <style scoped>
 #project-canvas {
