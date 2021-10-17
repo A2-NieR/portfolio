@@ -6,6 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import AutoImport from 'unplugin-auto-import/vite'
+import WindiCSS from 'vite-plugin-windicss'
 
 export default defineConfig({
   resolve: {
@@ -26,6 +27,7 @@ export default defineConfig({
     }),
     AutoImport({
       imports: ['vue']
-    })
+    }),
+    WindiCSS()
   ]
 })

@@ -1,30 +1,27 @@
 <template>
-  <header class="block">
-    <div class="block h-full m-0 p-0" id="hero">
+  <header display="block">
+    <div display="block" h="full" m="0" p="0" id="hero">
       <div
-        class="
-          flex flex-wrap
-          relative
-          h-full
-          w-full
-          items-end
-          justify-center
-          m-0
-          p-0
-          px-16
-          md:px-24
-        "
+        pos="relative"
+        h="full"
+        w="full"
+        display="flex"
+        flex="wrap"
+        justify="items-center"
+        align="items-end"
+        m="0"
+        p="0 x-16 md:x-24"
         id="hero-canvas"
       >
         <div
-          class="block flex-grow-0 flex-shrink-0 m-0 p-0 pt-0 lg:pt-64"
+          display="block"
+          flex="grow-0 shrink-0"
+          m="0"
+          p="0 t-0 lg:t-64"
           id="hero-content"
         >
-          <h1
-            class="font-prata font-medium text-offwhite tracking-normal"
-            id="headline"
-          >
-            <div class="flex">
+          <h1 font="prata medium tracking-normal" text="offwhite" id="headline">
+            <div display="flex">
               <div
                 data-aos="fade-down"
                 data-aos-easing="ease-in-quart"
@@ -54,10 +51,6 @@
     </div>
   </header>
 </template>
-
-<script>
-export default {}
-</script>
 
 <style scoped>
 header {
