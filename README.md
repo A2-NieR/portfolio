@@ -10,4 +10,4 @@
   <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/BunnyTheLifeguard/portfolio">
 </div>
 
-Built with Vue, Vite and TailwindCSS.
+Built with Vue, Vite and WindiCSS.
