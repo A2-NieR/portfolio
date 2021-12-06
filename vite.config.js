@@ -11,13 +11,15 @@ import WindiCSS from 'vite-plugin-windicss'
 export default defineConfig({
   resolve: {
     alias: {
-      '~/': `${path.resolve(__dirname, 'src')}`
+      '~/': `${path.resolve(__dirname, 'src')}/`
     }
   },
   plugins: [
     vue(),
     Pages(),
-    Icons(),
+    Icons({
+      autoInstall: true
+    }),
     Components({
       resolvers: [
         IconsResolver({
