@@ -92,7 +92,7 @@
     },
     {
       "name": "Nuxt.JS",
-      "level": 2,
+      "level": 1,
       "logo": "M21.8 18.36L16.03 8.08c-.1-.08-.4-.65-1-.65c-.25 0-.6.1-.96.65l-.74 1.18l-2.02-3.61c-.05-.1-.4-.65-1-.65c-.25 0-.65.1-.95.65L2.18 18.31c-.05.1-.35.69-.05 1.19c.1.25.4.5 1.06.5h17.66c.1 0 .75 0 1.05-.5c.1-.24.2-.64-.1-1.14m-13.7-.05l-.15.55H3.24l7.12-12.52l2.3 4.13l-4.56 7.84m1.11.55l4.11-7.2l4.18 7.2H9.21m9.53 0l-.2-.55L14 10.46l1.03-1.73l5.72 10.13h-2.01z",
       "viewBox": "0 0 24 24"
     },
@@ -126,12 +126,6 @@
       "level": 1,
       "logo": "M493.89 58.275L355.178 83.558L379.282 0L186.79 37.718l-2.999 50.64L15.145 58.214C3.53 57.538-3.238 65.879 1.558 77.46l244.056 427.983c5.253 8.575 17.347 8.91 22.65 0L507.575 77.419c5.4-9.676-2.874-21.018-13.685-19.144zm-237 435.435L17.87 74.556l164.993 29.491l-7.778 131.365l67.632-15.608l-18.858 92.344l51.374-15.608l-25.495 123.397c-1.27 8.069 9.241 12.362 14.44.812l150.22-299.792l-74.135 14.308l10.086-34.962l140.91-25.684L256.89 493.71z",
       "viewBox": "0 0 510 512"
-    },
-    {
-      "name": "Snowpack",
-      "level": 2,
-      "logo": "M486.057 460.9H26.015C6.4 460.9-7.11 439.126 4.013 420.897l230.483-358.07c8.455-13.595 30.804-17.553 43.072 0l230.398 358.397c11.126 16.664-2.255 39.676-21.91 39.676zm-331.03-178.016l38.003 38.003l63.006-64.005h86.008l-86.008-132.265l-101.01 158.267z",
-      "viewBox": "0 0 512 512"
     },
     {
       "name": "MongoDB",
@@ -227,13 +221,6 @@
       "url": "https://covid19-vaccine-trials.netlify.app/",
       "git": "https://github.com/BunnyTheLifeguard/covid19-vaccine-trials",
       "img": ["images/c19_v2.png"]
-    },
-    {
-      "name": "Covid-19 Vaccine Trial Tracker (v1)",
-      "description": "An app made with React using the API of clinivaltrials.gov to display the current status of clinical trials for different Covid-19 vaccines.",
-      "url": "https://c19-vaccine-trials.herokuapp.com/",
-      "git": "https://github.com/BunnyTheLifeguard/c19_vaccine_trial_tracker",
-      "img": ["images/c19.png", "images/c19t.png"]
     },
     {
       "name": "Fullstack Open - Vue Edition",
